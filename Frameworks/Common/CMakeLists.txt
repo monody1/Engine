@@ -1,7 +1,7 @@
 add_library(
     common 
     main.cpp 
-    base_application.cpp
+    baseApplication.cpp
 )
 
 # target_link_libraries(

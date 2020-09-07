@@ -6,7 +6,7 @@
 #define BASE_APPLICATION_HPP
 
 #include "appliction.hpp"
-#include "GfxConfiguration.hpp"
+#include "gfxConfiguration.hpp"
 
 namespace engine {
     class BaseApplication: implements IApplication{

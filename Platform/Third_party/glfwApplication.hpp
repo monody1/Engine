@@ -5,7 +5,7 @@
 #ifndef GAME_ENGINE_OSX_APPLICATION_HPP
 #define GAME_ENGINE_OSX_APPLICATION_HPP
 
-#include "base_application.hpp"
+#include "baseApplication.hpp"
 #include <GLFW/glfw3.h>
 
 namespace engine {
@@ -24,6 +24,8 @@ namespace engine {
 
         bool IsQuit() override;
 
+        void InitGlfw();
+        void FinalizeGlfw();
         static void CloseCallback(GLFWwindow* window);
     };
 }
