@@ -44,6 +44,9 @@ add_subdirectory(
     ${CMAKE_SOURCE_DIR}/Externals/
 )
 
+add_subdirectory(
+    ${CMAKE_SOURCE_DIR}/RHI/
+)
 #test
 add_subdirectory(
     ${CMAKE_SOURCE_DIR}/Playground/
