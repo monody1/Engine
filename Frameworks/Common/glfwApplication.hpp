@@ -11,10 +11,10 @@
 namespace engine {
 
     class GlfwApplication: implements BaseApplication {
-    private:
+    protected:
         GLFWwindow * m_pWindow = nullptr;
     public:
-        GlfwApplication(const GfxConfiguration &Config);
+        GlfwApplication(const GfxConfiguration &Config): BaseApplication(Config){};
 
         int Initialize() override;
 

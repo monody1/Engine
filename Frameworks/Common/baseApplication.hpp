@@ -24,8 +24,8 @@ namespace engine {
         bool IsQuit() override;
 
     protected:
-        static bool quit_;
-        engine::GfxConfiguration config_;
+        static bool m_quit;
+        engine::GfxConfiguration m_config;
     };
 }
 

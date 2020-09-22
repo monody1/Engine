@@ -32,6 +32,10 @@ namespace engine {
         uint32_t screen_height;
         std::string window_title;
 
+        // void SetTitle(const std::string& title){
+        //     window_title = title;
+        // }
+
         friend std::ostream& operator<<(std::ostream& out, const GfxConfiguration& config){
             out << "GfxConfiguration: " <<
                 "  R: " << config.red_bits <<

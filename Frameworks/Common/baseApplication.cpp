@@ -4,10 +4,10 @@
 
 #include "baseApplication.hpp"
 
-bool engine::BaseApplication::quit_ = false;
+bool engine::BaseApplication::m_quit = false;
 
 int engine::BaseApplication::Initialize() {
-    std::cout << config_;
+    std::cout << m_config;
     return 0;
 }
 
@@ -20,8 +20,8 @@ void engine::BaseApplication::Tick() {
 }
 
 bool engine::BaseApplication::IsQuit() {
-    return quit_;
+    return m_quit;
 }
 
 engine::BaseApplication::BaseApplication(const engine::GfxConfiguration &config)
-: config_(config) {}
+: m_config(config) {}

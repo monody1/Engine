@@ -4,3 +4,10 @@ build/
 Playground/
 Out/
 Externals/
+.clangd/
+.DS_Store
+Makefile
+CMakeFiles
+CMakeCache.txt
+CMakeDoxy*
+compil*

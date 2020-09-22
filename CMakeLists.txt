@@ -4,6 +4,8 @@ project(OpenMc VERSION 0.1.0)
 # include(CTest)
 # enable_testing()
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 set(CMAKE_CXX_STANDARD 17)
 # set(CMAKE_CXX_FLAGS, -std==c++17)
 
@@ -22,14 +24,16 @@ endif ()
 include_directories(
         ${CMAKE_SOURCE_DIR}/Frameworks/Common/
         ${CMAKE_SOURCE_DIR}/Frameworks/Interface/
-        ${CMAKE_SOURCE_DIR}/Platform/Third_party/
+        ${CMAKE_SOURCE_DIR}/Platform/
+        # ${CMAKE_SOURCE_DIR}/WSI/Glfw/
+        ${CMAKE_SOURCE_DIR}/Externals/VulkanSDK/include/
         # ${CMAKE_SOURCE_DIR}/external/crossguid
 )
 
 include_directories(
     ${CMAKE_SOURCE_DIR}/Externals/glfw/include
     ${CMAKE_SOURCE_DIR}/Externals/glm
-    # ${CMAKE_SOURCE_DIR}/Externals/
+    ${CMAKE_SOURCE_DIR}/Externals/glad/include
 )
 
 add_subdirectory(
