@@ -5,8 +5,8 @@
 #ifndef GAME_ENGINE_APPLICTION_HPP
 #define GAME_ENGINE_APPLICTION_HPP
 
-#include "interface.hpp"
-#include "runtimeModule.hpp"
+#include "Interface.hpp"
+#include "IRuntimeModule.hpp"
 
 namespace engine{
     Interface IApplication: implements IRuntimeModule{

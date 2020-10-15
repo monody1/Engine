@@ -7,7 +7,7 @@
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include "baseApplication.hpp"
+#include "BaseApplication.hpp"
 
 #ifndef __OPENGLAPPLICATION_HPP__
 #define __OPENGLAPPLICATION_HPP__

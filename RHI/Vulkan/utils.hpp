@@ -4,7 +4,7 @@
 #include <fstream>
 #include <string>
 
-static char g_kProjectPath[] = "/Users/chen.zr/workspace/OpenMc/";
+static char g_kProjectPath[] = "/Users/chen.zr/workspace/Engine/";
 
 static char* ReadFile(const std::string& fileName, size_t* rBufferSize){
     auto path = g_kProjectPath + fileName;

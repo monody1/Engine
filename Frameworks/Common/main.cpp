@@ -1,7 +1,6 @@
 
 #include <iostream>
-#include "appliction.hpp"
-#include "glfwApplication.hpp"
+#include "IAppliction.hpp"
 
 using namespace engine;
 

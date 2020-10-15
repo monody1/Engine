@@ -11,12 +11,12 @@
 #include <set>
 #include <optional>
 #include <cstring>
-#include <GLFW/glfw3.h>
 #include <algorithm>
-// #include <iostream>
-#include "baseApplication.hpp"
-#include "vulkan/vulkan_core.h"
-#include "utils.hpp"
+#include <iostream>
+// #include "vulkan/vulkan_core.h"
+#include "Utils.hpp"
+// #include "glfwApplication.hpp"
+#include "GraphicsManager.hpp"
 
 
 namespace engine{
@@ -44,17 +44,17 @@ namespace engine{
         // std::cout << "No_debug" << std::endl;
     #endif
 
-    class VulkanApplication: public BaseApplication
+    class VulkanGraphicsManager: public GraphicsManager
     {
     private:
         /* data */
     public:
-        VulkanApplication(const GfxConfiguration& config): BaseApplication(config){};
+        // VulkanApplication(const GfxConfiguration& config): GlfwApplication(config){};
         int Initialize() override;
         void Finalize() override;
         void Tick() override;
 
-        bool IsQuit() override;
+        ~VulkanGraphicsManager() override{}
 
         void InitVulkan();
         void DrawFrame();
@@ -88,10 +88,6 @@ namespace engine{
         VkSurfaceFormatKHR ChooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR> &availableFormats);
         VkPresentModeKHR ChooseSwapPresentMode(const std::vector<VkPresentModeKHR> &availablePresentModes);
         VkExtent2D ChooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities);
-
-        
-        //Glfw help func
-        static void CloseCallback(GLFWwindow* window);
 
         //Vk func prototype
         VkResult CreateDebugUtilsMessengerEXT(
@@ -138,8 +134,6 @@ namespace engine{
 
         std::vector<VkImageView> m_imageViews;
         std::vector<VkFramebuffer> m_swapChainFramebuffers;
-
-        GLFWwindow * m_pWindow = nullptr;
 
         const std::vector<const char*> m_kValidationLayers = {
             // "VK_LAYER_LUNARG_STANDARD_VALIDATION" has been deprecated

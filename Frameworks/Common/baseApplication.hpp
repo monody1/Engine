@@ -5,8 +5,8 @@
 #ifndef BASE_APPLICATION_HPP
 #define BASE_APPLICATION_HPP
 
-#include "appliction.hpp"
-#include "gfxConfiguration.hpp"
+#include "IAppliction.hpp"
+#include "GfxConfiguration.hpp"
 
 namespace engine {
     class BaseApplication: implements IApplication{
@@ -23,9 +23,8 @@ namespace engine {
 
         bool IsQuit() override;
 
-    protected:
-        static bool m_quit;
         engine::GfxConfiguration m_config;
+        static bool m_quit;
     };
 }
 

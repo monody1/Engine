@@ -1,7 +1,9 @@
 add_library(
     common 
     main.cpp 
-    baseApplication.cpp
+    BaseApplication.cpp
+    SceneObject.cpp
+    GraphicsManager.cpp
     # glfwApplication.cpp
 )
 

@@ -2,7 +2,7 @@
 // Created by Chen.Zr on 2020/3/20.
 //
 
-#include "baseApplication.hpp"
+#include "BaseApplication.hpp"
 
 bool engine::BaseApplication::m_quit = false;
 

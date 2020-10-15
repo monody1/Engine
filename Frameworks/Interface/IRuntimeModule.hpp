@@ -5,7 +5,7 @@
 #ifndef GAME_ENGINE_RUNTIME_MODULE_HPP
 #define GAME_ENGINE_RUNTIME_MODULE_HPP
 
-#include "interface.hpp"
+#include "Interface.hpp"
 // why use custom Init and final replace constructor and destructor
 // Chapter 5
 namespace engine{
@@ -18,7 +18,6 @@ namespace engine{
         virtual void Finalize() = 0;
         //drive module do its work in particular cycle
         virtual void Tick() = 0;
-
     };
 }
 

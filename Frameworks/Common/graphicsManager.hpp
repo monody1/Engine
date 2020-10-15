@@ -7,18 +7,18 @@
 
 #ifndef __GRAPHICSMANAGER_HPP__
 #define __GRAPHICSMANAGER_HPP__
-#include "runtimeModule.hpp"
+#include "IRuntimeModule.hpp"
 
 namespace engine
 {
-class GraphicsManager: implements IRuntimeModule
-{
-public:
-    int Initialize() override; 
-    void Tick() override;
-    void Finalize() override; 
-    virtual ~GraphicsManager();
-};
+    class GraphicsManager : implements IRuntimeModule
+    {
+    public:
+        int Initialize() override;
+        void Tick() override;
+        void Finalize() override;
+        virtual ~GraphicsManager(){};
+    };
 } // namespace engine
 
 #endif

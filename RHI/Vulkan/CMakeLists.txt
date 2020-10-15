@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(OpenMc VERSION 0.1.0)
+project(Engine VERSION 0.1.0)
 
-add_executable(vulkanApplication ./vulkanApplication.cpp)
+add_library(VulkanRHI ./VulkanGraphicsManager.cpp)
 
 # target_include_directories(
 #     helloVulkan
@@ -10,9 +10,9 @@ add_executable(vulkanApplication ./vulkanApplication.cpp)
 # )
 
 target_link_libraries(
-    vulkanApplication
-    PRIVATE
-    ${CMAKE_SOURCE_DIR}/Externals/VulkanSDK/lib/libvulkan.1.2.148.dylib
-    common
-    glfw
+        VulkanRHI
+        PRIVATE
+        # GlfwApplication
+        ${CMAKE_SOURCE_DIR}/Externals/VulkanSDK/lib/libvulkan.1.2.148.dylib
+        # Common
 )

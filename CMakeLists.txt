@@ -4,17 +4,18 @@ project(OpenMc VERSION 0.1.0)
 # include(CTest)
 # enable_testing()
 
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # set(CMAKE_CXX_FLAGS, -std==c++17)
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${PROJECT_SOURCE_DIR}/Out/Bin)   
+# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${PROJECT_SOURCE_DIR}/Out/Bin)   
 # set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${PROJECT_SOURCE_DIR}/Out/Bin) 
 
-SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/Out/Bin)       #设置可执行文件的输出目录
+# SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/Out/Bin)       #设置可执行文件的输出目录
 
-SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/Out/Lib)           #设置库文件的输出目录
+# SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/Out/Lib)           #设置库文件的输出目录
 
 
 if (CMAKE_BUILD_TYPE MATCHES "Debug" )
@@ -22,15 +23,17 @@ if (CMAKE_BUILD_TYPE MATCHES "Debug" )
 endif ()
 
 include_directories(
-        ${CMAKE_SOURCE_DIR}/Frameworks/Common/
-        ${CMAKE_SOURCE_DIR}/Frameworks/Interface/
-        ${CMAKE_SOURCE_DIR}/Platform/
-        # ${CMAKE_SOURCE_DIR}/WSI/Glfw/
-        ${CMAKE_SOURCE_DIR}/Externals/VulkanSDK/include/
+        ${CMAKE_SOURCE_DIR}/Frameworks/Common
+        ${CMAKE_SOURCE_DIR}/Frameworks/Interface
+        ${CMAKE_SOURCE_DIR}/Platform/GLFW
+        ${CMAKE_SOURCE_DIR}/RHI/Vulkan
+        # ${CMAKE_SOURCE_DIR}/WSI/
         # ${CMAKE_SOURCE_DIR}/external/crossguid
 )
-
+        
 include_directories(
+    ${CMAKE_SOURCE_DIR}/Externals/VulkanSDK/include/
+    ${CMAKE_SOURCE_DIR}/Externals/crossguid/include
     ${CMAKE_SOURCE_DIR}/Externals/glfw/include
     ${CMAKE_SOURCE_DIR}/Externals/glm
     ${CMAKE_SOURCE_DIR}/Externals/glad/include
@@ -73,3 +76,5 @@ add_subdirectory(
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 # include(CPack)
+
+# compilef

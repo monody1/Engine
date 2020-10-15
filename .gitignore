@@ -2,7 +2,7 @@ build/
 .vscode/
 *.cmake
 Playground/
-Out/
+Out/*
 Externals/
 .clangd/
 .DS_Store

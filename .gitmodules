@@ -1,3 +1,6 @@
 [submodule "Externals/glfw"]
 	path = Externals/glfw
 	url = https://github.com/glfw/glfw
+[submodule "Externals/crossguid"]
+	path = Externals/crossguid
+	url = https://github.com/graeme-hill/crossguid
